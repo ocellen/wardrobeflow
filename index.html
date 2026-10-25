@@ -8,23 +8,34 @@
 <title>WardrobeFlow | Costume Hire Management</title>
 
 <style>
+
 :root {
-  --navy: #202c3b;
-  --gold: #d8c39a;
-  --bg: #f5f6f8;
+  /* Main brand colours */
+  --navy: #204b38;
+  --gold: #c4d9c5;
+
+  /* Page and surface colours */
+  --bg: #f3f7f3;
   --paper: #ffffff;
-  --ink: #243044;
-  --muted: #758094;
-  --line: #e4e8ed;
-  --green: #27804a;
-  --green-bg: #e6f5e9;
+  --ink: #23372c;
+  --muted: #718176;
+  --line: #dce7dd;
+
+  /* Green status colours */
+  --green: #26734d;
+  --green-bg: #e4f3e8;
+
+  /* Keep warning and error states distinct */
   --amber: #8a5700;
   --amber-bg: #fff2d5;
   --red: #b42318;
   --red-bg: #fde8e7;
+
+  /* Informational status */
   --blue: #2866a3;
   --blue-bg: #e8f1fc;
 }
+
 
 * { box-sizing: border-box; }
 
@@ -413,6 +424,71 @@ textarea { min-height: 85px; resize: vertical; }
   .mobile-nav button.active { background: #edf0f4; color: var(--navy); }
   .toolbar > * { min-width: 0; }
 }
+  
+/* ===== Forest green theme refinements ===== */
+
+/* Active desktop navigation */
+.nav-button.active {
+  background: #e4f0e6;
+  color: var(--navy);
+}
+
+/* Active mobile navigation */
+.mobile-nav button.active {
+  background: #e4f0e6;
+  color: var(--navy);
+}
+
+/* Logo and accent details */
+.logo {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.brand small {
+  color: #c4d9c5;
+}
+
+/* Softer green sample-data labels */
+.sample-pill {
+  background: #e4f0e6;
+  color: #28583b;
+}
+
+/* Inventory and dashboard icon backgrounds */
+.metric-icon,
+.item-icon {
+  background: #edf4ed;
+}
+
+/* Barcode scanner panel */
+.scan-box {
+  background: #f0f6f0;
+  border-color: #b9cdbb;
+}
+
+/* Keyboard focus accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: #39845a;
+}
+
+/* Smooth transitions for interactive elements */
+.btn,
+.nav-button,
+.mobile-nav button {
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.btn.primary:hover {
+  background: #183c2b;
+  border-color: #183c2b;
+}
+
 </style>
 </head>
 <body>
